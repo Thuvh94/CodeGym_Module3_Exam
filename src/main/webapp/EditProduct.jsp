@@ -15,7 +15,7 @@
 <form action="/Product?action=edit" method="post">
     <table>
         <tr>ID</tr>
-        <tr><input type="hidden" value="${product.getProductId()}"></tr>
+        <tr><input type="hidden" name = "id" value="${product.getProductId()}">${product.getProductId()}</tr>
         <tr>
             <td>Name</td>
             <td><input type="text" name="productName" value="${product.getProductName()}"></td>
