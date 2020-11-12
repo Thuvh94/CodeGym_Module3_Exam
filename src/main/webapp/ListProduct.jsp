@@ -39,8 +39,16 @@
                 <a href="/Product?action=edit&id=${product.getProductId()}">Edit</a>
             </td>
             <td>
-                <a href="/Product?action=delete&id=${product.getProductId()}">Delete</a>
+                <button onclick="confirmDelete()">Delete</button>
             </td>
+            <script>
+                function confirmDelete() {
+                    let isDelete = confirm("Bạn có chắc chắn muốn xóa không?\n Đây là thao tác không thể khôi phục");
+                    if (isDelete) {
+                        window.location.href = "/Product?action=delete&id=${product.getProductId()}";
+                    }
+                }
+            </script>
 
         </tr>
     </c:forEach>
